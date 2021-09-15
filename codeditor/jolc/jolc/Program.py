@@ -73,6 +73,7 @@ class Program(Tree):
             ec = error
             console.pprint(ec)
 
+# Esta funcion sirve para generar la tabla de simbolos en el Reporte
 
     def BuildReport(self):
         tablasimbolos = []
