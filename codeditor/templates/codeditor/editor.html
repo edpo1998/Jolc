@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load bootstrap_icons %}
+{% load djangocodemirror_tags %}
+{% block title %} Code Editor - {{block.super}} {% endblock title %}
+
+
+{% block content %}
+<!-- CSS -->
+<style>
+            
+    .cidetext{
+        display: flex;
+         justify-content: center;    
+    }
+    .contenidotexto{
+        height: 100%;
+        width:100%;
+        display: block;
+        justify-content: center; 
+    }
+    .botones{
+        left: 43%;
+        margin: 15px;
+        width: 15%;          
+    }
+</style>
+
+<!-- Contenedor -->
+        <div  class="contenidotexto">
+            <form  method='POST' action="."> {% csrf_token %}
+                <!-- Barra de Botones --> 
+                <div class="btn-group buttongrp botones" role="group">
+                    <button type="submit" class="btn btn-dark"> {% bs_icon 'gear-wide-connected' size='2.0em' %} <span class="font-weight-bold h5"> Run </span></button>
+                </div>  
+                <hr/>
+                <!-- Editores de Texto -->
+                <div class="cidetext">
+                    <textarea id="code" name="code">{{code}}</textarea>
+                    <textarea id="traduction" name="traduction">{{output}}</textarea>
+                </div>
+            </form>
+        </div>
+
+        <!-- Configuraciones Iniciales del CodeMirror -->
+        {% codemirror_instance 'javascript' 'code_codemirror' 'code' %}
+        <!-- Configuraciones Iniciales del CodeMirror -->
+        {% codemirror_instance 'javascript' 'traduction_codemirror' 'traduction' %}
+
+
+
+<!-- Javascript  -->
+        <script>
+            code_codemirror.setSize(600, 600)
+            code_codemirror.setOption("theme", 'colorforth')
+            
+            traduction_codemirror.setSize(600, 600)
+            traduction_codemirror.setOption("readOnly", true)
+            traduction_codemirror.setOption("theme", 'darcula')  
+        </script>
+
+{% endblock content %}
+
+    

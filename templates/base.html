@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  {% block title %} JOLC {% endblock title %} </title>
+    <link rel="shortcut icon" href="{% static 'img/icon.png' %}" />
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+</head>
+<body style="background-color: #196F3D ;padding: 0px;">
+    <!-- NAVBAR --> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin:0;">
+        <!-- HOME --> 
+          <a href="/" class="navbar-brand">
+            <!-- Logo Image -->
+            <img src="{% static 'img/jolc.png' %}" width="100" alt="" class="d-inline-block align-middle mr-2">
+
+            <span class="text-uppercase font-weight-bold "">Jolc </span>
+          </a>
+        <!-- RUTAS --> 
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/codeditor">  <span class="font-weight-bold ">Editor </span></a>
+          </div>
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/report"> <span class="font-weight-bold ">Report </span></a>
+          </div>
+        </div>
+    </nav>
+    {% block content %}
+        <!-- Codigo que cambiara dependiendo de la ruta que se renderize --> 
+    {% endblock content %} 
+</body>
+</html>

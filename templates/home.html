@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+<!-- Load Icons Bootstrap -->
+{% load bootstrap_icons %}
+
+{% block content %}
+
+  <div class="jumbotron  text-white" style="background-color:#084D21;" >
+    <div class="container">
+      <h1 class="display-3">  {% bs_icon 'translate' size='3.0em' %} JOLC - Interpreter</h1>
+      <p>
+         In computer science, an interpreter is a translator (computer program) that repeatedly
+         reads instructions (one at a time) and translates them to machine code. It then executes 
+         instructions written in a programming or scripting language, without requiring them previously 
+         to have been compiled into a machine language program. JOLC, is a Julia based programming language 
+         that it can be programmed and run from any browser.
+      </p>
+    </div>
+  </div>
+
+{% endblock %}
