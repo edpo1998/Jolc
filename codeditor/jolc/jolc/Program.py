@@ -80,7 +80,7 @@ class Program(Tree):
         self.global_scope.showSymbols(tablasimbolos)
         for key in scopes:
             funcion = scopes[key]
-            tablasimbolos.append([f'{funcion.func_name}','Function',f'global',f'{funcion.row}',f'{funcion.col}'])
+            tablasimbolos.append([f'{funcion.scope_level}'f'{funcion.func_name}','Function',f'global',f'{funcion.row}',f'{funcion.col}'])
             if(funcion.ref is not None):
                 funcion.ref.showSymbols(tablasimbolos)
         self.tablasimbolos = tablasimbolos
