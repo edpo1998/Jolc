@@ -29,8 +29,8 @@ class CallFunction(Tree):
                 #Nueva tabla de anidacion
                 function_scope = FunctionScope(
                     scope_name          = self.func_name,                       # Nombre del ambito
-                    scope_level         = table.scope_level + 1,    # Nivel de Anidacion sera el siguiente de su predecesor
-                    enclosing_scope     = table,                    # Referencia al ambito superior en el que anida
+                    scope_level         = tree.global_scope.scope_level + 1,    # Nivel de Anidacion sera el siguiente de su predecesor
+                    enclosing_scope     = tree.global_scope,                    # Referencia al ambito superior en el que anida
                 )
                 
                  #Insertamos primero los parametros formales 

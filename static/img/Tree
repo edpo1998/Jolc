@@ -4,13 +4,1257 @@ digraph Tree {
     edge [arrowsize=.5]
   node1 [label=<<B>JOLC</B>>]
   node2 [label=<<B>InstructionList</B>>]
-  node3 [label=<<B>ShowConsole</B> tipo: print>]
-  node4 [label=<( <B> Arguments </B> )>]
-  node5 [label=<<B>Cadena</B> :>]
-  node6 [label="Hola mundo"]
-  node5 -> node6
-  node4 -> node5
+  node3 [label=<<B>Assignament </B> : =>]
+  node4 [label=<<B>Identifier</B> :index>]
   node3 -> node4
+  node5 [label=<<B>Int64</B> :0>]
+  node3 -> node5
+  node6 [label=<<B>Struct</B> : Nodo >]
+  node7 [label=<<B>mutable</B>>]
+  node6 -> node7
+  node8 [label=<( <B> Arguments </B> )>]
+  node9 [label=<<B>EvalType</B> : ::Int64 >]
+  node10 [label=<<B>Identifier</B> :valor>]
+  node9 -> node10
+  node8 -> node9
+  node11 [label=<<B>EvalType</B> : ::Int64 >]
+  node12 [label=<<B>Identifier</B> :altura>]
+  node11 -> node12
+  node8 -> node11
+  node13 [label=<<B>Identifier</B> :izquierda>]
+  node8 -> node13
+  node14 [label=<<B>Identifier</B> :derecha>]
+  node8 -> node14
+  node15 [label=<<B>EvalType</B> : ::Int64 >]
+  node16 [label=<<B>Identifier</B> :indice>]
+  node15 -> node16
+  node8 -> node15
+  node6 -> node8
+  node17 [label=<<B>Assignament </B> : =>]
+  node18 [label=<<B>Identifier</B> :root>]
+  node17 -> node18
+  node19 [label=<<B>Nothing</B> :None>]
+  node17 -> node19
+  node20 [label= <<B>FunctionDecl</B> : height>]
+  node21 [label=<( <B> Arguments </B> )>]
+  node22 [label=<<B>Identifier</B> :N>]
+  node21 -> node22
+  node20 -> node21
+  node23 [label=<<B>InstructionList</B>>]
+  node24 [label=<<B>If</B>>]
+  node25 [label="Boolean : ==" ]
+  node26 [label=<<B>Identifier</B> :N>]
+  node25 -> node26
+  node27 [label=<<B>Nothing</B> :None>]
+  node25 -> node27
+  node24 -> node25
+  node28 [label=<<B>InstructionList</B>>]
+  node29 [label=<<B>Return</B>>]
+  node30 [label=<<B>Int64</B> :0>]
+  node29 -> node30
+  node28 -> node29
+  node24 -> node28
+  node31 [label=<<B>Return</B>>]
+  node32 [label=<<B>AccessStruct</B> : N >]
+  node33 [label=<<B>Item </B> : altura >]
+  node32 -> node33
+  node31 -> node32
+  node23 -> node24
+  node23 -> node31
+  node20 -> node23
+  node34 [label= <<B>FunctionDecl</B> : max>]
+  node35 [label=<( <B> Arguments </B> )>]
+  node36 [label=<<B>EvalType</B> : ::Int64 >]
+  node37 [label=<<B>Identifier</B> :a>]
+  node36 -> node37
+  node35 -> node36
+  node38 [label=<<B>EvalType</B> : ::Int64 >]
+  node39 [label=<<B>Identifier</B> :b>]
+  node38 -> node39
+  node35 -> node38
+  node34 -> node35
+  node40 [label=<<B>InstructionList</B>>]
+  node41 [label=<<B>If</B>>]
+  node42 [label="Boolean : >" ]
+  node43 [label=<<B>Identifier</B> :a>]
+  node42 -> node43
+  node44 [label=<<B>Identifier</B> :b>]
+  node42 -> node44
+  node41 -> node42
+  node45 [label=<<B>InstructionList</B>>]
+  node46 [label=<<B>Return</B>>]
+  node47 [label=<<B>Identifier</B> :a>]
+  node46 -> node47
+  node45 -> node46
+  node41 -> node45
+  node48 [label=<<B>Return</B>>]
+  node49 [label=<<B>Identifier</B> :b>]
+  node48 -> node49
+  node40 -> node41
+  node40 -> node48
+  node34 -> node40
+  node50 [label= <<B>FunctionDecl</B> : rightRotate>]
+  node51 [label=<( <B> Arguments </B> )>]
+  node52 [label=<<B>EvalType</B> : ::Nodo >]
+  node53 [label=<<B>Identifier</B> :y>]
+  node52 -> node53
+  node51 -> node52
+  node50 -> node51
+  node54 [label=<<B>InstructionList</B>>]
+  node55 [label=<<B>Assignament </B> : =>]
+  node56 [label=<<B>Identifier</B> :x>]
+  node55 -> node56
+  node57 [label=<<B>AccessStruct</B> : y >]
+  node58 [label=<<B>Item </B> : izquierda >]
+  node57 -> node58
+  node55 -> node57
+  node59 [label=<<B>Assignament </B> : =>]
+  node60 [label=<<B>Identifier</B> :T2>]
+  node59 -> node60
+  node61 [label=<<B>AccessStruct</B> : x >]
+  node62 [label=<<B>Item </B> : derecha >]
+  node61 -> node62
+  node59 -> node61
+  node63 [label=<<B>Assignament </B> : =>]
+  node64 [label=<<B>AccessStruct</B> : x >]
+  node65 [label=<<B>Item </B> : derecha >]
+  node64 -> node65
+  node63 -> node64
+  node66 [label=<<B>Identifier</B> :y>]
+  node63 -> node66
+  node67 [label=<<B>Assignament </B> : =>]
+  node68 [label=<<B>AccessStruct</B> : y >]
+  node69 [label=<<B>Item </B> : izquierda >]
+  node68 -> node69
+  node67 -> node68
+  node70 [label=<<B>Identifier</B> :T2>]
+  node67 -> node70
+  node71 [label=<<B>Assignament </B> : =>]
+  node72 [label=<<B>AccessStruct</B> : y >]
+  node73 [label=<<B>Item </B> : altura >]
+  node72 -> node73
+  node71 -> node72
+  node74 [label=<<B>Arithmetic</B> : + >]
+  node75 [label=<<B>CallFunction</B> : max >]
+  node76 [label=<( <B> Arguments </B> )>]
+  node77 [label=<<B>CallFunction</B> : height >]
+  node78 [label=<( <B> Arguments </B> )>]
+  node79 [label=<<B>AccessStruct</B> : y >]
+  node80 [label=<<B>Item </B> : izquierda >]
+  node79 -> node80
+  node78 -> node79
+  node77 -> node78
+  node76 -> node77
+  node81 [label=<<B>CallFunction</B> : height >]
+  node82 [label=<( <B> Arguments </B> )>]
+  node83 [label=<<B>AccessStruct</B> : y >]
+  node84 [label=<<B>Item </B> : derecha >]
+  node83 -> node84
+  node82 -> node83
+  node81 -> node82
+  node76 -> node81
+  node75 -> node76
+  node74 -> node75
+  node85 [label=<<B>Int64</B> :1>]
+  node74 -> node85
+  node71 -> node74
+  node86 [label=<<B>Assignament </B> : =>]
+  node87 [label=<<B>AccessStruct</B> : x >]
+  node88 [label=<<B>Item </B> : altura >]
+  node87 -> node88
+  node86 -> node87
+  node89 [label=<<B>Arithmetic</B> : + >]
+  node90 [label=<<B>CallFunction</B> : max >]
+  node91 [label=<( <B> Arguments </B> )>]
+  node92 [label=<<B>CallFunction</B> : height >]
+  node93 [label=<( <B> Arguments </B> )>]
+  node94 [label=<<B>AccessStruct</B> : x >]
+  node95 [label=<<B>Item </B> : izquierda >]
+  node94 -> node95
+  node93 -> node94
+  node92 -> node93
+  node91 -> node92
+  node96 [label=<<B>CallFunction</B> : height >]
+  node97 [label=<( <B> Arguments </B> )>]
+  node98 [label=<<B>AccessStruct</B> : x >]
+  node99 [label=<<B>Item </B> : derecha >]
+  node98 -> node99
+  node97 -> node98
+  node96 -> node97
+  node91 -> node96
+  node90 -> node91
+  node89 -> node90
+  node100 [label=<<B>Int64</B> :1>]
+  node89 -> node100
+  node86 -> node89
+  node101 [label=<<B>Return</B>>]
+  node102 [label=<<B>Identifier</B> :x>]
+  node101 -> node102
+  node54 -> node55
+  node54 -> node59
+  node54 -> node63
+  node54 -> node67
+  node54 -> node71
+  node54 -> node86
+  node54 -> node101
+  node50 -> node54
+  node103 [label= <<B>FunctionDecl</B> : leftRotate>]
+  node104 [label=<( <B> Arguments </B> )>]
+  node105 [label=<<B>EvalType</B> : ::Nodo >]
+  node106 [label=<<B>Identifier</B> :x>]
+  node105 -> node106
+  node104 -> node105
+  node103 -> node104
+  node107 [label=<<B>InstructionList</B>>]
+  node108 [label=<<B>Assignament </B> : =>]
+  node109 [label=<<B>Identifier</B> :y>]
+  node108 -> node109
+  node110 [label=<<B>AccessStruct</B> : x >]
+  node111 [label=<<B>Item </B> : derecha >]
+  node110 -> node111
+  node108 -> node110
+  node112 [label=<<B>Assignament </B> : =>]
+  node113 [label=<<B>Identifier</B> :T2>]
+  node112 -> node113
+  node114 [label=<<B>AccessStruct</B> : y >]
+  node115 [label=<<B>Item </B> : izquierda >]
+  node114 -> node115
+  node112 -> node114
+  node116 [label=<<B>Assignament </B> : =>]
+  node117 [label=<<B>AccessStruct</B> : y >]
+  node118 [label=<<B>Item </B> : izquierda >]
+  node117 -> node118
+  node116 -> node117
+  node119 [label=<<B>Identifier</B> :x>]
+  node116 -> node119
+  node120 [label=<<B>Assignament </B> : =>]
+  node121 [label=<<B>AccessStruct</B> : x >]
+  node122 [label=<<B>Item </B> : derecha >]
+  node121 -> node122
+  node120 -> node121
+  node123 [label=<<B>Identifier</B> :T2>]
+  node120 -> node123
+  node124 [label=<<B>Assignament </B> : =>]
+  node125 [label=<<B>AccessStruct</B> : x >]
+  node126 [label=<<B>Item </B> : altura >]
+  node125 -> node126
+  node124 -> node125
+  node127 [label=<<B>Arithmetic</B> : + >]
+  node128 [label=<<B>CallFunction</B> : max >]
+  node129 [label=<( <B> Arguments </B> )>]
+  node130 [label=<<B>CallFunction</B> : height >]
+  node131 [label=<( <B> Arguments </B> )>]
+  node132 [label=<<B>AccessStruct</B> : x >]
+  node133 [label=<<B>Item </B> : izquierda >]
+  node132 -> node133
+  node131 -> node132
+  node130 -> node131
+  node129 -> node130
+  node134 [label=<<B>CallFunction</B> : height >]
+  node135 [label=<( <B> Arguments </B> )>]
+  node136 [label=<<B>AccessStruct</B> : x >]
+  node137 [label=<<B>Item </B> : derecha >]
+  node136 -> node137
+  node135 -> node136
+  node134 -> node135
+  node129 -> node134
+  node128 -> node129
+  node127 -> node128
+  node138 [label=<<B>Int64</B> :1>]
+  node127 -> node138
+  node124 -> node127
+  node139 [label=<<B>Assignament </B> : =>]
+  node140 [label=<<B>AccessStruct</B> : y >]
+  node141 [label=<<B>Item </B> : altura >]
+  node140 -> node141
+  node139 -> node140
+  node142 [label=<<B>Arithmetic</B> : + >]
+  node143 [label=<<B>CallFunction</B> : max >]
+  node144 [label=<( <B> Arguments </B> )>]
+  node145 [label=<<B>CallFunction</B> : height >]
+  node146 [label=<( <B> Arguments </B> )>]
+  node147 [label=<<B>AccessStruct</B> : y >]
+  node148 [label=<<B>Item </B> : izquierda >]
+  node147 -> node148
+  node146 -> node147
+  node145 -> node146
+  node144 -> node145
+  node149 [label=<<B>CallFunction</B> : height >]
+  node150 [label=<( <B> Arguments </B> )>]
+  node151 [label=<<B>AccessStruct</B> : y >]
+  node152 [label=<<B>Item </B> : derecha >]
+  node151 -> node152
+  node150 -> node151
+  node149 -> node150
+  node144 -> node149
+  node143 -> node144
+  node142 -> node143
+  node153 [label=<<B>Int64</B> :1>]
+  node142 -> node153
+  node139 -> node142
+  node154 [label=<<B>Return</B>>]
+  node155 [label=<<B>Identifier</B> :y>]
+  node154 -> node155
+  node107 -> node108
+  node107 -> node112
+  node107 -> node116
+  node107 -> node120
+  node107 -> node124
+  node107 -> node139
+  node107 -> node154
+  node103 -> node107
+  node156 [label= <<B>FunctionDecl</B> : getBalance>]
+  node157 [label=<( <B> Arguments </B> )>]
+  node158 [label=<<B>Identifier</B> :N>]
+  node157 -> node158
+  node156 -> node157
+  node159 [label=<<B>InstructionList</B>>]
+  node160 [label=<<B>If</B>>]
+  node161 [label="Boolean : ==" ]
+  node162 [label=<<B>Identifier</B> :N>]
+  node161 -> node162
+  node163 [label=<<B>Nothing</B> :None>]
+  node161 -> node163
+  node160 -> node161
+  node164 [label=<<B>InstructionList</B>>]
+  node165 [label=<<B>Return</B>>]
+  node166 [label=<<B>Int64</B> :0>]
+  node165 -> node166
+  node164 -> node165
+  node160 -> node164
+  node167 [label=<<B>Return</B>>]
+  node168 [label=<<B>Arithmetic</B> : - >]
+  node169 [label=<<B>CallFunction</B> : height >]
+  node170 [label=<( <B> Arguments </B> )>]
+  node171 [label=<<B>AccessStruct</B> : N >]
+  node172 [label=<<B>Item </B> : izquierda >]
+  node171 -> node172
+  node170 -> node171
+  node169 -> node170
+  node168 -> node169
+  node173 [label=<<B>CallFunction</B> : height >]
+  node174 [label=<( <B> Arguments </B> )>]
+  node175 [label=<<B>AccessStruct</B> : N >]
+  node176 [label=<<B>Item </B> : derecha >]
+  node175 -> node176
+  node174 -> node175
+  node173 -> node174
+  node168 -> node173
+  node167 -> node168
+  node159 -> node160
+  node159 -> node167
+  node156 -> node159
+  node177 [label= <<B>FunctionDecl</B> : insert>]
+  node178 [label=<( <B> Arguments </B> )>]
+  node179 [label=<<B>Identifier</B> :node>]
+  node178 -> node179
+  node180 [label=<<B>EvalType</B> : ::Int64 >]
+  node181 [label=<<B>Identifier</B> :key>]
+  node180 -> node181
+  node178 -> node180
+  node177 -> node178
+  node182 [label=<<B>InstructionList</B>>]
+  node183 [label=<<B>If</B>>]
+  node184 [label="Boolean : ==" ]
+  node185 [label=<<B>Identifier</B> :node>]
+  node184 -> node185
+  node186 [label=<<B>Nothing</B> :None>]
+  node184 -> node186
+  node183 -> node184
+  node187 [label=<<B>InstructionList</B>>]
+  node188 [label=<<B>Return</B>>]
+  node189 [label=<<B>CallFunction</B> : Nodo >]
+  node190 [label=<( <B> Arguments </B> )>]
+  node191 [label=<<B>Identifier</B> :key>]
+  node190 -> node191
+  node192 [label=<<B>Int64</B> :1>]
+  node190 -> node192
+  node193 [label=<<B>Nothing</B> :None>]
+  node190 -> node193
+  node194 [label=<<B>Nothing</B> :None>]
+  node190 -> node194
+  node195 [label=<<B>Int64</B> :0>]
+  node190 -> node195
+  node189 -> node190
+  node188 -> node189
+  node187 -> node188
+  node183 -> node187
+  node196 [label=<<B>If</B>>]
+  node197 [label="Boolean : <" ]
+  node198 [label=<<B>Identifier</B> :key>]
+  node197 -> node198
+  node199 [label=<<B>AccessStruct</B> : node >]
+  node200 [label=<<B>Item </B> : valor >]
+  node199 -> node200
+  node197 -> node199
+  node196 -> node197
+  node201 [label=<<B>InstructionList</B>>]
+  node202 [label=<<B>Assignament </B> : =>]
+  node203 [label=<<B>AccessStruct</B> : node >]
+  node204 [label=<<B>Item </B> : izquierda >]
+  node203 -> node204
+  node202 -> node203
+  node205 [label=<<B>CallFunction</B> : insert >]
+  node206 [label=<( <B> Arguments </B> )>]
+  node207 [label=<<B>AccessStruct</B> : node >]
+  node208 [label=<<B>Item </B> : izquierda >]
+  node207 -> node208
+  node206 -> node207
+  node209 [label=<<B>Identifier</B> :key>]
+  node206 -> node209
+  node205 -> node206
+  node202 -> node205
+  node201 -> node202
+  node196 -> node201
+  node210 [label=<<B>ElseIf</B>>]
+  node211 [label="Boolean : >" ]
+  node212 [label=<<B>Identifier</B> :key>]
+  node211 -> node212
+  node213 [label=<<B>AccessStruct</B> : node >]
+  node214 [label=<<B>Item </B> : valor >]
+  node213 -> node214
+  node211 -> node213
+  node210 -> node211
+  node215 [label=<<B>InstructionList</B>>]
+  node216 [label=<<B>Assignament </B> : =>]
+  node217 [label=<<B>AccessStruct</B> : node >]
+  node218 [label=<<B>Item </B> : derecha >]
+  node217 -> node218
+  node216 -> node217
+  node219 [label=<<B>CallFunction</B> : insert >]
+  node220 [label=<( <B> Arguments </B> )>]
+  node221 [label=<<B>AccessStruct</B> : node >]
+  node222 [label=<<B>Item </B> : derecha >]
+  node221 -> node222
+  node220 -> node221
+  node223 [label=<<B>Identifier</B> :key>]
+  node220 -> node223
+  node219 -> node220
+  node216 -> node219
+  node215 -> node216
+  node210 -> node215
+  node196 -> node210
+  node224 [label=<<B>InstructionList</B>>]
+  node225 [label=<<B>Return</B>>]
+  node226 [label=<<B>Identifier</B> :node>]
+  node225 -> node226
+  node224 -> node225
+  node196 -> node224
+  node227 [label=<<B>Assignament </B> : =>]
+  node228 [label=<<B>AccessStruct</B> : node >]
+  node229 [label=<<B>Item </B> : altura >]
+  node228 -> node229
+  node227 -> node228
+  node230 [label=<<B>Arithmetic</B> : + >]
+  node231 [label=<<B>Int64</B> :1>]
+  node230 -> node231
+  node232 [label=<<B>CallFunction</B> : max >]
+  node233 [label=<( <B> Arguments </B> )>]
+  node234 [label=<<B>CallFunction</B> : height >]
+  node235 [label=<( <B> Arguments </B> )>]
+  node236 [label=<<B>AccessStruct</B> : node >]
+  node237 [label=<<B>Item </B> : izquierda >]
+  node236 -> node237
+  node235 -> node236
+  node234 -> node235
+  node233 -> node234
+  node238 [label=<<B>CallFunction</B> : height >]
+  node239 [label=<( <B> Arguments </B> )>]
+  node240 [label=<<B>AccessStruct</B> : node >]
+  node241 [label=<<B>Item </B> : derecha >]
+  node240 -> node241
+  node239 -> node240
+  node238 -> node239
+  node233 -> node238
+  node232 -> node233
+  node230 -> node232
+  node227 -> node230
+  node242 [label=<<B>Assignament </B> : =>]
+  node243 [label=<<B>Identifier</B> :balance>]
+  node242 -> node243
+  node244 [label=<<B>CallFunction</B> : getBalance >]
+  node245 [label=<( <B> Arguments </B> )>]
+  node246 [label=<<B>Identifier</B> :node>]
+  node245 -> node246
+  node244 -> node245
+  node242 -> node244
+  node247 [label=<<B>Assignament </B> : =>]
+  node248 [label=<<B>Identifier</B> :izq>]
+  node247 -> node248
+  node249 [label=<<B>AccessStruct</B> : node >]
+  node250 [label=<<B>Item </B> : izquierda >]
+  node249 -> node250
+  node247 -> node249
+  node251 [label=<<B>If</B>>]
+  node252 [label="Boolean : !=" ]
+  node253 [label=<<B>Identifier</B> :izq>]
+  node252 -> node253
+  node254 [label=<<B>Nothing</B> :None>]
+  node252 -> node254
+  node251 -> node252
+  node255 [label=<<B>InstructionList</B>>]
+  node256 [label=<<B>If</B>>]
+  node257 [label="Boolean : &&" ]
+  node258 [label="Boolean : >" ]
+  node259 [label=<<B>Identifier</B> :balance>]
+  node258 -> node259
+  node260 [label=<<B>Int64</B> :1>]
+  node258 -> node260
+  node257 -> node258
+  node261 [label="Boolean : <" ]
+  node262 [label=<<B>Identifier</B> :key>]
+  node261 -> node262
+  node263 [label=<<B>AccessStruct</B> : izq >]
+  node264 [label=<<B>Item </B> : valor >]
+  node263 -> node264
+  node261 -> node263
+  node257 -> node261
+  node256 -> node257
+  node265 [label=<<B>InstructionList</B>>]
+  node266 [label=<<B>Return</B>>]
+  node267 [label=<<B>CallFunction</B> : rightRotate >]
+  node268 [label=<( <B> Arguments </B> )>]
+  node269 [label=<<B>Identifier</B> :node>]
+  node268 -> node269
+  node267 -> node268
+  node266 -> node267
+  node265 -> node266
+  node256 -> node265
+  node270 [label=<<B>If</B>>]
+  node271 [label="Boolean : &&" ]
+  node272 [label="Boolean : >" ]
+  node273 [label=<<B>Identifier</B> :balance>]
+  node272 -> node273
+  node274 [label=<<B>Int64</B> :1>]
+  node272 -> node274
+  node271 -> node272
+  node275 [label="Boolean : >" ]
+  node276 [label=<<B>Identifier</B> :key>]
+  node275 -> node276
+  node277 [label=<<B>AccessStruct</B> : izq >]
+  node278 [label=<<B>Item </B> : valor >]
+  node277 -> node278
+  node275 -> node277
+  node271 -> node275
+  node270 -> node271
+  node279 [label=<<B>InstructionList</B>>]
+  node280 [label=<<B>Assignament </B> : =>]
+  node281 [label=<<B>AccessStruct</B> : node >]
+  node282 [label=<<B>Item </B> : izquierda >]
+  node281 -> node282
+  node280 -> node281
+  node283 [label=<<B>CallFunction</B> : leftRotate >]
+  node284 [label=<( <B> Arguments </B> )>]
+  node285 [label=<<B>AccessStruct</B> : node >]
+  node286 [label=<<B>Item </B> : izquierda >]
+  node285 -> node286
+  node284 -> node285
+  node283 -> node284
+  node280 -> node283
+  node287 [label=<<B>Return</B>>]
+  node288 [label=<<B>CallFunction</B> : rightRotate >]
+  node289 [label=<( <B> Arguments </B> )>]
+  node290 [label=<<B>Identifier</B> :node>]
+  node289 -> node290
+  node288 -> node289
+  node287 -> node288
+  node279 -> node280
+  node279 -> node287
+  node270 -> node279
+  node255 -> node256
+  node255 -> node270
+  node251 -> node255
+  node291 [label=<<B>Assignament </B> : =>]
+  node292 [label=<<B>Identifier</B> :der>]
+  node291 -> node292
+  node293 [label=<<B>AccessStruct</B> : node >]
+  node294 [label=<<B>Item </B> : derecha >]
+  node293 -> node294
+  node291 -> node293
+  node295 [label=<<B>If</B>>]
+  node296 [label="Boolean : !=" ]
+  node297 [label=<<B>Identifier</B> :der>]
+  node296 -> node297
+  node298 [label=<<B>Nothing</B> :None>]
+  node296 -> node298
+  node295 -> node296
+  node299 [label=<<B>InstructionList</B>>]
+  node300 [label=<<B>If</B>>]
+  node301 [label="Boolean : &&" ]
+  node302 [label="Boolean : <" ]
+  node303 [label=<<B>Identifier</B> :balance>]
+  node302 -> node303
+  node304 [label=<<B>UArithmetic</B> : - >]
+  node305 [label=<<B>Int64</B> :1>]
+  node304 -> node305
+  node302 -> node304
+  node301 -> node302
+  node306 [label="Boolean : >" ]
+  node307 [label=<<B>Identifier</B> :key>]
+  node306 -> node307
+  node308 [label=<<B>AccessStruct</B> : der >]
+  node309 [label=<<B>Item </B> : valor >]
+  node308 -> node309
+  node306 -> node308
+  node301 -> node306
+  node300 -> node301
+  node310 [label=<<B>InstructionList</B>>]
+  node311 [label=<<B>Return</B>>]
+  node312 [label=<<B>CallFunction</B> : leftRotate >]
+  node313 [label=<( <B> Arguments </B> )>]
+  node314 [label=<<B>Identifier</B> :node>]
+  node313 -> node314
+  node312 -> node313
+  node311 -> node312
+  node310 -> node311
+  node300 -> node310
+  node315 [label=<<B>If</B>>]
+  node316 [label="Boolean : &&" ]
+  node317 [label="Boolean : <" ]
+  node318 [label=<<B>Identifier</B> :balance>]
+  node317 -> node318
+  node319 [label=<<B>UArithmetic</B> : - >]
+  node320 [label=<<B>Int64</B> :1>]
+  node319 -> node320
+  node317 -> node319
+  node316 -> node317
+  node321 [label="Boolean : <" ]
+  node322 [label=<<B>Identifier</B> :key>]
+  node321 -> node322
+  node323 [label=<<B>AccessStruct</B> : der >]
+  node324 [label=<<B>Item </B> : valor >]
+  node323 -> node324
+  node321 -> node323
+  node316 -> node321
+  node315 -> node316
+  node325 [label=<<B>InstructionList</B>>]
+  node326 [label=<<B>Assignament </B> : =>]
+  node327 [label=<<B>AccessStruct</B> : node >]
+  node328 [label=<<B>Item </B> : derecha >]
+  node327 -> node328
+  node326 -> node327
+  node329 [label=<<B>CallFunction</B> : rightRotate >]
+  node330 [label=<( <B> Arguments </B> )>]
+  node331 [label=<<B>AccessStruct</B> : node >]
+  node332 [label=<<B>Item </B> : derecha >]
+  node331 -> node332
+  node330 -> node331
+  node329 -> node330
+  node326 -> node329
+  node333 [label=<<B>Return</B>>]
+  node334 [label=<<B>CallFunction</B> : leftRotate >]
+  node335 [label=<( <B> Arguments </B> )>]
+  node336 [label=<<B>Identifier</B> :node>]
+  node335 -> node336
+  node334 -> node335
+  node333 -> node334
+  node325 -> node326
+  node325 -> node333
+  node315 -> node325
+  node299 -> node300
+  node299 -> node315
+  node295 -> node299
+  node337 [label=<<B>Return</B>>]
+  node338 [label=<<B>Identifier</B> :node>]
+  node337 -> node338
+  node182 -> node183
+  node182 -> node196
+  node182 -> node227
+  node182 -> node242
+  node182 -> node247
+  node182 -> node251
+  node182 -> node291
+  node182 -> node295
+  node182 -> node337
+  node177 -> node182
+  node339 [label= <<B>FunctionDecl</B> : preOrder>]
+  node340 [label=<( <B> Arguments </B> )>]
+  node341 [label=<<B>Identifier</B> :node>]
+  node340 -> node341
+  node339 -> node340
+  node342 [label=<<B>InstructionList</B>>]
+  node343 [label=<<B>If</B>>]
+  node344 [label="Boolean : !=" ]
+  node345 [label=<<B>Identifier</B> :node>]
+  node344 -> node345
+  node346 [label=<<B>Nothing</B> :None>]
+  node344 -> node346
+  node343 -> node344
+  node347 [label=<<B>InstructionList</B>>]
+  node348 [label=<<B>ShowConsole</B> tipo: print>]
+  node349 [label=<( <B> Arguments </B> )>]
+  node350 [label=<<B>AccessStruct</B> : node >]
+  node351 [label=<<B>Item </B> : valor >]
+  node350 -> node351
+  node349 -> node350
+  node348 -> node349
+  node352 [label=<<B>ShowConsole</B> tipo: print>]
+  node353 [label=<( <B> Arguments </B> )>]
+  node354 [label=<<B>Cadena</B> :>]
+  node355 [label=" "]
+  node354 -> node355
+  node353 -> node354
+  node352 -> node353
+  node356 [label=<<B>CallFunction</B> : preOrder >]
+  node357 [label=<( <B> Arguments </B> )>]
+  node358 [label=<<B>AccessStruct</B> : node >]
+  node359 [label=<<B>Item </B> : izquierda >]
+  node358 -> node359
+  node357 -> node358
+  node356 -> node357
+  node360 [label=<<B>CallFunction</B> : preOrder >]
+  node361 [label=<( <B> Arguments </B> )>]
+  node362 [label=<<B>AccessStruct</B> : node >]
+  node363 [label=<<B>Item </B> : derecha >]
+  node362 -> node363
+  node361 -> node362
+  node360 -> node361
+  node347 -> node348
+  node347 -> node352
+  node347 -> node356
+  node347 -> node360
+  node343 -> node347
+  node342 -> node343
+  node339 -> node342
+  node364 [label= <<B>FunctionDecl</B> : indexnodes>]
+  node365 [label=<( <B> Arguments </B> )>]
+  node366 [label=<<B>Identifier</B> :node>]
+  node365 -> node366
+  node364 -> node365
+  node367 [label=<<B>InstructionList</B>>]
+  node368 [label=<<B>Scope </B> : global>]
+  node369 [label=<<B>Identifier</B> :index>]
+  node368 -> node369
+  node370 [label=<<B>If</B>>]
+  node371 [label="Boolean : ==" ]
+  node372 [label=<<B>Identifier</B> :node>]
+  node371 -> node372
+  node373 [label=<<B>Nothing</B> :None>]
+  node371 -> node373
+  node370 -> node371
+  node374 [label=<<B>InstructionList</B>>]
+  node375 [label=<<B>Return</B>>]
+  node376 [label=<<B>Int64</B> :0>]
+  node375 -> node376
+  node374 -> node375
+  node370 -> node374
+  node377 [label=<<B>Assignament </B> : =>]
+  node378 [label=<<B>AccessStruct</B> : node >]
+  node379 [label=<<B>Item </B> : indice >]
+  node378 -> node379
+  node377 -> node378
+  node380 [label=<<B>Identifier</B> :index>]
+  node377 -> node380
+  node381 [label=<<B>Assignament </B> : =>]
+  node382 [label=<<B>Identifier</B> :index>]
+  node381 -> node382
+  node383 [label=<<B>Arithmetic</B> : + >]
+  node384 [label=<<B>Identifier</B> :index>]
+  node383 -> node384
+  node385 [label=<<B>Int64</B> :1>]
+  node383 -> node385
+  node381 -> node383
+  node386 [label=<<B>If</B>>]
+  node387 [label="Boolean : !=" ]
+  node388 [label=<<B>AccessStruct</B> : node >]
+  node389 [label=<<B>Item </B> : izquierda >]
+  node388 -> node389
+  node387 -> node388
+  node390 [label=<<B>Nothing</B> :None>]
+  node387 -> node390
+  node386 -> node387
+  node391 [label=<<B>InstructionList</B>>]
+  node392 [label=<<B>CallFunction</B> : indexnodes >]
+  node393 [label=<( <B> Arguments </B> )>]
+  node394 [label=<<B>AccessStruct</B> : node >]
+  node395 [label=<<B>Item </B> : izquierda >]
+  node394 -> node395
+  node393 -> node394
+  node392 -> node393
+  node391 -> node392
+  node386 -> node391
+  node396 [label=<<B>If</B>>]
+  node397 [label="Boolean : !=" ]
+  node398 [label=<<B>AccessStruct</B> : node >]
+  node399 [label=<<B>Item </B> : derecha >]
+  node398 -> node399
+  node397 -> node398
+  node400 [label=<<B>Nothing</B> :None>]
+  node397 -> node400
+  node396 -> node397
+  node401 [label=<<B>InstructionList</B>>]
+  node402 [label=<<B>CallFunction</B> : indexnodes >]
+  node403 [label=<( <B> Arguments </B> )>]
+  node404 [label=<<B>AccessStruct</B> : node >]
+  node405 [label=<<B>Item </B> : derecha >]
+  node404 -> node405
+  node403 -> node404
+  node402 -> node403
+  node401 -> node402
+  node396 -> node401
+  node367 -> node368
+  node367 -> node370
+  node367 -> node377
+  node367 -> node381
+  node367 -> node386
+  node367 -> node396
+  node364 -> node367
+  node406 [label= <<B>FunctionDecl</B> : graphviz>]
+  node407 [label=<( <B> Arguments </B> )>]
+  node408 [label=<<B>Identifier</B> :node>]
+  node407 -> node408
+  node406 -> node407
+  node409 [label=<<B>InstructionList</B>>]
+  node410 [label=<<B>Scope </B> : global>]
+  node411 [label=<<B>Identifier</B> :index>]
+  node410 -> node411
+  node412 [label=<<B>Assignament </B> : =>]
+  node413 [label=<<B>Identifier</B> :index>]
+  node412 -> node413
+  node414 [label=<<B>Int64</B> :0>]
+  node412 -> node414
+  node415 [label=<<B>CallFunction</B> : indexnodes >]
+  node416 [label=<( <B> Arguments </B> )>]
+  node417 [label=<<B>Identifier</B> :node>]
+  node416 -> node417
+  node415 -> node416
+  node418 [label=<<B>ShowConsole</B> tipo: println>]
+  node419 [label=<( <B> Arguments </B> )>]
+  node420 [label=<<B>Cadena</B> :>]
+  node421 [label="digraph g{"]
+  node420 -> node421
+  node419 -> node420
+  node418 -> node419
+  node422 [label=<<B>CallFunction</B> : graphnode >]
+  node423 [label=<( <B> Arguments </B> )>]
+  node424 [label=<<B>Identifier</B> :node>]
+  node423 -> node424
+  node422 -> node423
+  node425 [label=<<B>ShowConsole</B> tipo: println>]
+  node426 [label=<( <B> Arguments </B> )>]
+  node427 [label=<<B>Cadena</B> :>]
+  node428 [label="}"]
+  node427 -> node428
+  node426 -> node427
+  node425 -> node426
+  node429 [label=<<B>Return</B>>]
+  node430 [label=<<B>Cadena</B> :>]
+  node431 [label=""]
+  node430 -> node431
+  node429 -> node430
+  node409 -> node410
+  node409 -> node412
+  node409 -> node415
+  node409 -> node418
+  node409 -> node422
+  node409 -> node425
+  node409 -> node429
+  node406 -> node409
+  node432 [label= <<B>FunctionDecl</B> : graphnode>]
+  node433 [label=<( <B> Arguments </B> )>]
+  node434 [label=<<B>Identifier</B> :node>]
+  node433 -> node434
+  node432 -> node433
+  node435 [label=<<B>InstructionList</B>>]
+  node436 [label=<<B>If</B>>]
+  node437 [label="Boolean : ==" ]
+  node438 [label=<<B>Identifier</B> :node>]
+  node437 -> node438
+  node439 [label=<<B>Nothing</B> :None>]
+  node437 -> node439
+  node436 -> node437
+  node440 [label=<<B>InstructionList</B>>]
+  node441 [label=<<B>ShowConsole</B> tipo: print>]
+  node442 [label=<( <B> Arguments </B> )>]
+  node443 [label=<<B>Cadena</B> :>]
+  node444 [label=""]
+  node443 -> node444
+  node442 -> node443
+  node441 -> node442
+  node445 [label=<<B>Return</B>>]
+  node446 [label=<<B>Cadena</B> :>]
+  node447 [label=""]
+  node446 -> node447
+  node445 -> node446
+  node440 -> node441
+  node440 -> node445
+  node436 -> node440
+  node448 [label=<<B>ShowConsole</B> tipo: print>]
+  node449 [label=<( <B> Arguments </B> )>]
+  node450 [label=<<B>Cadena</B> :>]
+  node451 [label="node"]
+  node450 -> node451
+  node449 -> node450
+  node448 -> node449
+  node452 [label=<<B>ShowConsole</B> tipo: print>]
+  node453 [label=<( <B> Arguments </B> )>]
+  node454 [label=<<B>AccessStruct</B> : node >]
+  node455 [label=<<B>Item </B> : indice >]
+  node454 -> node455
+  node453 -> node454
+  node452 -> node453
+  node456 [label=<<B>ShowConsole</B> tipo: print>]
+  node457 [label=<( <B> Arguments </B> )>]
+  node458 [label=<<B>Cadena</B> :>]
+  node459 [label="[label='"]
+  node458 -> node459
+  node457 -> node458
+  node456 -> node457
+  node460 [label=<<B>ShowConsole</B> tipo: print>]
+  node461 [label=<( <B> Arguments </B> )>]
+  node462 [label=<<B>AccessStruct</B> : node >]
+  node463 [label=<<B>Item </B> : valor >]
+  node462 -> node463
+  node461 -> node462
+  node460 -> node461
+  node464 [label=<<B>ShowConsole</B> tipo: println>]
+  node465 [label=<( <B> Arguments </B> )>]
+  node466 [label=<<B>Cadena</B> :>]
+  node467 [label="'];"]
+  node466 -> node467
+  node465 -> node466
+  node464 -> node465
+  node468 [label=<<B>If</B>>]
+  node469 [label="Boolean : !=" ]
+  node470 [label=<<B>AccessStruct</B> : node >]
+  node471 [label=<<B>Item </B> : izquierda >]
+  node470 -> node471
+  node469 -> node470
+  node472 [label=<<B>Nothing</B> :None>]
+  node469 -> node472
+  node468 -> node469
+  node473 [label=<<B>InstructionList</B>>]
+  node474 [label=<<B>CallFunction</B> : graphnode >]
+  node475 [label=<( <B> Arguments </B> )>]
+  node476 [label=<<B>AccessStruct</B> : node >]
+  node477 [label=<<B>Item </B> : izquierda >]
+  node476 -> node477
+  node475 -> node476
+  node474 -> node475
+  node478 [label=<<B>Assignament </B> : =>]
+  node479 [label=<<B>Identifier</B> :izq>]
+  node478 -> node479
+  node480 [label=<<B>AccessStruct</B> : node >]
+  node481 [label=<<B>Item </B> : izquierda >]
+  node480 -> node481
+  node478 -> node480
+  node482 [label=<<B>ShowConsole</B> tipo: print>]
+  node483 [label=<( <B> Arguments </B> )>]
+  node484 [label=<<B>Cadena</B> :>]
+  node485 [label="node"]
+  node484 -> node485
+  node483 -> node484
+  node482 -> node483
+  node486 [label=<<B>ShowConsole</B> tipo: print>]
+  node487 [label=<( <B> Arguments </B> )>]
+  node488 [label=<<B>AccessStruct</B> : node >]
+  node489 [label=<<B>Item </B> : indice >]
+  node488 -> node489
+  node487 -> node488
+  node486 -> node487
+  node490 [label=<<B>ShowConsole</B> tipo: print>]
+  node491 [label=<( <B> Arguments </B> )>]
+  node492 [label=<<B>Cadena</B> :>]
+  node493 [label=" -> "]
+  node492 -> node493
+  node491 -> node492
+  node490 -> node491
+  node494 [label=<<B>ShowConsole</B> tipo: print>]
+  node495 [label=<( <B> Arguments </B> )>]
+  node496 [label=<<B>Cadena</B> :>]
+  node497 [label="node"]
+  node496 -> node497
+  node495 -> node496
+  node494 -> node495
+  node498 [label=<<B>ShowConsole</B> tipo: print>]
+  node499 [label=<( <B> Arguments </B> )>]
+  node500 [label=<<B>AccessStruct</B> : izq >]
+  node501 [label=<<B>Item </B> : indice >]
+  node500 -> node501
+  node499 -> node500
+  node498 -> node499
+  node502 [label=<<B>ShowConsole</B> tipo: println>]
+  node503 [label=<( <B> Arguments </B> )>]
+  node504 [label=<<B>Cadena</B> :>]
+  node505 [label=";"]
+  node504 -> node505
+  node503 -> node504
+  node502 -> node503
+  node473 -> node474
+  node473 -> node478
+  node473 -> node482
+  node473 -> node486
+  node473 -> node490
+  node473 -> node494
+  node473 -> node498
+  node473 -> node502
+  node468 -> node473
+  node506 [label=<<B>If</B>>]
+  node507 [label="Boolean : !=" ]
+  node508 [label=<<B>AccessStruct</B> : node >]
+  node509 [label=<<B>Item </B> : derecha >]
+  node508 -> node509
+  node507 -> node508
+  node510 [label=<<B>Nothing</B> :None>]
+  node507 -> node510
+  node506 -> node507
+  node511 [label=<<B>InstructionList</B>>]
+  node512 [label=<<B>CallFunction</B> : graphnode >]
+  node513 [label=<( <B> Arguments </B> )>]
+  node514 [label=<<B>AccessStruct</B> : node >]
+  node515 [label=<<B>Item </B> : derecha >]
+  node514 -> node515
+  node513 -> node514
+  node512 -> node513
+  node516 [label=<<B>Assignament </B> : =>]
+  node517 [label=<<B>Identifier</B> :der>]
+  node516 -> node517
+  node518 [label=<<B>AccessStruct</B> : node >]
+  node519 [label=<<B>Item </B> : derecha >]
+  node518 -> node519
+  node516 -> node518
+  node520 [label=<<B>ShowConsole</B> tipo: print>]
+  node521 [label=<( <B> Arguments </B> )>]
+  node522 [label=<<B>Cadena</B> :>]
+  node523 [label="node"]
+  node522 -> node523
+  node521 -> node522
+  node520 -> node521
+  node524 [label=<<B>ShowConsole</B> tipo: print>]
+  node525 [label=<( <B> Arguments </B> )>]
+  node526 [label=<<B>AccessStruct</B> : node >]
+  node527 [label=<<B>Item </B> : indice >]
+  node526 -> node527
+  node525 -> node526
+  node524 -> node525
+  node528 [label=<<B>ShowConsole</B> tipo: print>]
+  node529 [label=<( <B> Arguments </B> )>]
+  node530 [label=<<B>Cadena</B> :>]
+  node531 [label=" -> "]
+  node530 -> node531
+  node529 -> node530
+  node528 -> node529
+  node532 [label=<<B>ShowConsole</B> tipo: print>]
+  node533 [label=<( <B> Arguments </B> )>]
+  node534 [label=<<B>Cadena</B> :>]
+  node535 [label="node"]
+  node534 -> node535
+  node533 -> node534
+  node532 -> node533
+  node536 [label=<<B>ShowConsole</B> tipo: print>]
+  node537 [label=<( <B> Arguments </B> )>]
+  node538 [label=<<B>AccessStruct</B> : der >]
+  node539 [label=<<B>Item </B> : indice >]
+  node538 -> node539
+  node537 -> node538
+  node536 -> node537
+  node540 [label=<<B>ShowConsole</B> tipo: println>]
+  node541 [label=<( <B> Arguments </B> )>]
+  node542 [label=<<B>Cadena</B> :>]
+  node543 [label=";"]
+  node542 -> node543
+  node541 -> node542
+  node540 -> node541
+  node511 -> node512
+  node511 -> node516
+  node511 -> node520
+  node511 -> node524
+  node511 -> node528
+  node511 -> node532
+  node511 -> node536
+  node511 -> node540
+  node506 -> node511
+  node544 [label=<<B>Return</B>>]
+  node545 [label=<<B>Cadena</B> :>]
+  node546 [label=""]
+  node545 -> node546
+  node544 -> node545
+  node435 -> node436
+  node435 -> node448
+  node435 -> node452
+  node435 -> node456
+  node435 -> node460
+  node435 -> node464
+  node435 -> node468
+  node435 -> node506
+  node435 -> node544
+  node432 -> node435
+  node547 [label= <<B>FunctionDecl</B> : main>]
+  node548 [label=<( <B> Arguments </B> )>]
+  node547 -> node548
+  node549 [label=<<B>InstructionList</B>>]
+  node550 [label=<<B>Scope </B> : global>]
+  node551 [label=<<B>Identifier</B> :root>]
+  node550 -> node551
+  node552 [label=<<B>Assignament </B> : =>]
+  node553 [label=<<B>Identifier</B> :root>]
+  node552 -> node553
+  node554 [label=<<B>CallFunction</B> : insert >]
+  node555 [label=<( <B> Arguments </B> )>]
+  node556 [label=<<B>Identifier</B> :root>]
+  node555 -> node556
+  node557 [label=<<B>Int64</B> :10>]
+  node555 -> node557
+  node554 -> node555
+  node552 -> node554
+  node558 [label=<<B>Assignament </B> : =>]
+  node559 [label=<<B>Identifier</B> :root>]
+  node558 -> node559
+  node560 [label=<<B>CallFunction</B> : insert >]
+  node561 [label=<( <B> Arguments </B> )>]
+  node562 [label=<<B>Identifier</B> :root>]
+  node561 -> node562
+  node563 [label=<<B>Int64</B> :20>]
+  node561 -> node563
+  node560 -> node561
+  node558 -> node560
+  node564 [label=<<B>ShowConsole</B> tipo: println>]
+  node565 [label=<( <B> Arguments </B> )>]
+  node566 [label=<<B>Cadena</B> :>]
+  node567 [label=""]
+  node566 -> node567
+  node565 -> node566
+  node564 -> node565
+  node568 [label=<<B>Assignament </B> : =>]
+  node569 [label=<<B>Identifier</B> :root>]
+  node568 -> node569
+  node570 [label=<<B>CallFunction</B> : insert >]
+  node571 [label=<( <B> Arguments </B> )>]
+  node572 [label=<<B>Identifier</B> :root>]
+  node571 -> node572
+  node573 [label=<<B>Int64</B> :30>]
+  node571 -> node573
+  node570 -> node571
+  node568 -> node570
+  node574 [label=<<B>Assignament </B> : =>]
+  node575 [label=<<B>Identifier</B> :root>]
+  node574 -> node575
+  node576 [label=<<B>CallFunction</B> : insert >]
+  node577 [label=<( <B> Arguments </B> )>]
+  node578 [label=<<B>Identifier</B> :root>]
+  node577 -> node578
+  node579 [label=<<B>Int64</B> :40>]
+  node577 -> node579
+  node576 -> node577
+  node574 -> node576
+  node580 [label=<<B>Assignament </B> : =>]
+  node581 [label=<<B>Identifier</B> :root>]
+  node580 -> node581
+  node582 [label=<<B>CallFunction</B> : insert >]
+  node583 [label=<( <B> Arguments </B> )>]
+  node584 [label=<<B>Identifier</B> :root>]
+  node583 -> node584
+  node585 [label=<<B>Int64</B> :50>]
+  node583 -> node585
+  node582 -> node583
+  node580 -> node582
+  node586 [label=<<B>Assignament </B> : =>]
+  node587 [label=<<B>Identifier</B> :root>]
+  node586 -> node587
+  node588 [label=<<B>CallFunction</B> : insert >]
+  node589 [label=<( <B> Arguments </B> )>]
+  node590 [label=<<B>Identifier</B> :root>]
+  node589 -> node590
+  node591 [label=<<B>Int64</B> :25>]
+  node589 -> node591
+  node588 -> node589
+  node586 -> node588
+  node592 [label=<<B>Assignament </B> : =>]
+  node593 [label=<<B>Identifier</B> :root>]
+  node592 -> node593
+  node594 [label=<<B>CallFunction</B> : insert >]
+  node595 [label=<( <B> Arguments </B> )>]
+  node596 [label=<<B>Identifier</B> :root>]
+  node595 -> node596
+  node597 [label=<<B>Int64</B> :35>]
+  node595 -> node597
+  node594 -> node595
+  node592 -> node594
+  node598 [label=<<B>Assignament </B> : =>]
+  node599 [label=<<B>Identifier</B> :root>]
+  node598 -> node599
+  node600 [label=<<B>CallFunction</B> : insert >]
+  node601 [label=<( <B> Arguments </B> )>]
+  node602 [label=<<B>Identifier</B> :root>]
+  node601 -> node602
+  node603 [label=<<B>Int64</B> :90>]
+  node601 -> node603
+  node600 -> node601
+  node598 -> node600
+  node604 [label=<<B>Assignament </B> : =>]
+  node605 [label=<<B>Identifier</B> :root>]
+  node604 -> node605
+  node606 [label=<<B>CallFunction</B> : insert >]
+  node607 [label=<( <B> Arguments </B> )>]
+  node608 [label=<<B>Identifier</B> :root>]
+  node607 -> node608
+  node609 [label=<<B>Int64</B> :85>]
+  node607 -> node609
+  node606 -> node607
+  node604 -> node606
+  node610 [label=<<B>ShowConsole</B> tipo: println>]
+  node611 [label=<( <B> Arguments </B> )>]
+  node612 [label=<<B>Cadena</B> :>]
+  node613 [label="Preorder traversal of constructed tree is : "]
+  node612 -> node613
+  node611 -> node612
+  node610 -> node611
+  node614 [label=<<B>CallFunction</B> : preOrder >]
+  node615 [label=<( <B> Arguments </B> )>]
+  node616 [label=<<B>Identifier</B> :root>]
+  node615 -> node616
+  node614 -> node615
+  node617 [label=<<B>ShowConsole</B> tipo: println>]
+  node618 [label=<( <B> Arguments </B> )>]
+  node619 [label=<<B>Cadena</B> :>]
+  node620 [label="Graphviz"]
+  node619 -> node620
+  node618 -> node619
+  node617 -> node618
+  node621 [label=<<B>CallFunction</B> : graphviz >]
+  node622 [label=<( <B> Arguments </B> )>]
+  node623 [label=<<B>Identifier</B> :root>]
+  node622 -> node623
+  node621 -> node622
+  node624 [label=<<B>ShowConsole</B> tipo: println>]
+  node625 [label=<( <B> Arguments </B> )>]
+  node626 [label=<<B>Identifier</B> :root>]
+  node625 -> node626
+  node624 -> node625
+  node549 -> node550
+  node549 -> node552
+  node549 -> node558
+  node549 -> node564
+  node549 -> node568
+  node549 -> node574
+  node549 -> node580
+  node549 -> node586
+  node549 -> node592
+  node549 -> node598
+  node549 -> node604
+  node549 -> node610
+  node549 -> node614
+  node549 -> node617
+  node549 -> node621
+  node549 -> node624
+  node547 -> node549
+  node627 [label=<<B>CallFunction</B> : main >]
+  node628 [label=<( <B> Arguments </B> )>]
+  node627 -> node628
   node2 -> node3
+  node2 -> node6
+  node2 -> node17
+  node2 -> node20
+  node2 -> node34
+  node2 -> node50
+  node2 -> node103
+  node2 -> node156
+  node2 -> node177
+  node2 -> node339
+  node2 -> node364
+  node2 -> node406
+  node2 -> node432
+  node2 -> node547
+  node2 -> node627
   node1 -> node2
 }
