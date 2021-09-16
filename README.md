@@ -13,9 +13,10 @@ This repository is private so if you are reading this you can get a copy of the 
 
 
 ### Pre-requirements📋
-_Ubuntu20.04.3LTS
-_Python3
-_Django3.2.6
+* Django3.2.6
+* Ubuntu 20.04.3 LTS
+* Python3
+
 
 ### Installation 🔧
 
