@@ -1,5 +1,3 @@
-# Jolc
-
 
 # JOLC
 
