@@ -82,8 +82,7 @@ def treereport(request, *args, **kwargs):
         dot = ASTVisualizer(context['ast'])
         reporte   = dot.GenereteAst()         #  Ast generado por la derivacion de la gramatica  
         ast = graphviz.Source(reporte)
-        #ast.format = 'pdf'
-        print("Prueba de Cambio");
+        ast.format = 'pdf'
         #ast.render()
-        ast.view(tempfile.mktemp('.pdf'))     
+        ast.view()     
     return  render( request , "codeditor/report.html", {})

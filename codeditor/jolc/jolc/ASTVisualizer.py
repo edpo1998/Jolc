@@ -17,7 +17,7 @@ class Walker:
         return visitor(node)
 
     def generic_visit(self, node):
-        pass#raise Exception('No visit_{} method'.format(type(node).__name__))
+        raise Exception('No visit_{} method'.format(type(node).__name__))
 
 
 class ASTVisualizer(Walker):
