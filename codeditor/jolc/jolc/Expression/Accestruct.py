@@ -39,28 +39,6 @@ class AccesStruct(Tree):
                 tree.addError(Description.SEMANTIC_ID_404,self.identifier.identifier,self.row,self.col) 
         return valoriterable
      
-    '''
-    def acces_struct_value_list(self, tree, table):
-        simbol = table.lookup(self.identifier.identifier)           #Retorna el Simbolo
-        valor_retorno = simbol.value
-        if valor_retorno is not None and isinstance(valor_retorno,dict) :                                      # Accedemos a los miembros
-            for item_access in self.item:
-                if(isinstance(item_access,AccesArray)):
-                    if( isinstance(valor_retorno,dict)):
-                        array = valor_retorno[item_access.identifier]
-                        valor_retorno =  item_access.access_struct_array(tree,table,array)
-                    else:
-                      tree.addError(Description.SEMANTIC_NON_ITERABLE,"member",self.row,self.col)
-                elif(isinstance(item_access,Identifier)):
-                    if( isinstance(valor_retorno,dict)):
-                        valor_retorno = valor_retorno[item_access.identifier]
-                    else:
-                      tree.addError(Description.SEMANTIC_NON_ITERABLE,"member",self.row,self.col)   
-        else:                            
-            tree.addError(Description.SEMANTIC_ID_404,self.identifier.identifier,self.row,self.col) 
-        return valor_retorno
-    '''
-      
     
     def assignval(self,valor,tree,table):
         simbol = table.lookup(self.identifier.identifier)           #Retorna el Simbolo
