@@ -2,8 +2,10 @@ from django.http import HttpResponse    # Librebiar para peticiones
 from django.shortcuts import render     # Libreria para renderizar en el DOM
 from codeditor.jolc import jolc         # Interprete de JOLC
 from codeditor.jolc.jolc.ASTVisualizer import ASTVisualizer 
+from django.templatetags.static import static
+
 import graphviz
-import os
+
 # Create your views here.
 
 
@@ -80,6 +82,6 @@ def treereport(request, *args, **kwargs):
     dot = ASTVisualizer(context['ast'])
     reporte   = dot.GenereteAst()         #  Ast generado por la derivacion de la gramatica  
     ast = graphviz.Source(reporte)
-    #desktop = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop') 
-    #ast.render(desktop, view=True)     
+    tree_url = static('img/Tree')
+    ast.render(tree_url, view=True)     
     return  render( request , "codeditor/report.html", {})
