@@ -29,8 +29,7 @@ class ASTVisualizer(Walker):
 
     # Metodo que construye el ast 
     def GenereteAst(self):
-        sintactree = self.tree
-        self.visit(sintactree)
+        
         encabezado = [textwrap.dedent(
         """\
         digraph Tree {
@@ -39,8 +38,10 @@ class ASTVisualizer(Walker):
             edge [arrowsize=.5]
         """
         )] 
-        
-        footer = ['}'] 
+        footer = ['}']
+        if self.tree is not None:
+            sintactree = self.tree
+            self.visit(sintactree) 
         return ''.join(encabezado + self.contenido + footer)
 
 

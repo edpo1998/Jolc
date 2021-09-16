@@ -76,12 +76,14 @@ def symbolreport(request, *args, **kwargs):
     return  render( request , "codeditor/symbolreport.html", {"tabla": context['tablesym']})
 
 #   Renderiza el arbol ast y lo almacena en la aplicacion como un archivo estatico
+
 def treereport(request, *args, **kwargs):
-    dot = ASTVisualizer(context['ast'])
-    reporte   = dot.GenereteAst()         #  Ast generado por la derivacion de la gramatica  
-    ast = graphviz.Source(reporte)
-    #ast.format = 'pdf'
-    print("Prueba de Cambio");
-    #ast.render()
-    ast.view(tempfile.mktemp('.pdf'))     
+    if(context['ast'] is not None):
+        dot = ASTVisualizer(context['ast'])
+        reporte   = dot.GenereteAst()         #  Ast generado por la derivacion de la gramatica  
+        ast = graphviz.Source(reporte)
+        #ast.format = 'pdf'
+        print("Prueba de Cambio");
+        #ast.render()
+        ast.view(tempfile.mktemp('.pdf'))     
     return  render( request , "codeditor/report.html", {})
