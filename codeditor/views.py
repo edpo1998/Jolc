@@ -3,7 +3,7 @@ from django.shortcuts import render     # Libreria para renderizar en el DOM
 from codeditor.jolc import jolc         # Interprete de JOLC
 from codeditor.jolc.jolc.ASTVisualizer import ASTVisualizer 
 import graphviz
-
+import tempfile
 # Create your views here.
 
 
@@ -80,7 +80,8 @@ def treereport(request, *args, **kwargs):
     dot = ASTVisualizer(context['ast'])
     reporte   = dot.GenereteAst()         #  Ast generado por la derivacion de la gramatica  
     ast = graphviz.Source(reporte)
-    ast.format = 'pdf'
+    #ast.format = 'pdf'
     print("Prueba de Cambio");
-    ast.render()     
+    #ast.render()
+    ast.view(tempfile.mktemp('.pdf'))     
     return  render( request , "codeditor/report.html", {})
