@@ -3,7 +3,7 @@ from django.shortcuts import render     # Libreria para renderizar en el DOM
 from codeditor.jolc import jolc         # Interprete de JOLC
 from codeditor.jolc.jolc.ASTVisualizer import ASTVisualizer 
 import graphviz
-import tempfile
+
 # Create your views here.
 
 
@@ -76,13 +76,9 @@ def symbolreport(request, *args, **kwargs):
     return  render( request , "codeditor/symbolreport.html", {"tabla": context['tablesym']})
 
 #   Renderiza el arbol ast y lo almacena en la aplicacion como un archivo estatico
-
 def treereport(request, *args, **kwargs):
-    if(context['ast'] is not None):
-        dot = ASTVisualizer(context['ast'])
-        reporte   = dot.GenereteAst()         #  Ast generado por la derivacion de la gramatica  
-        ast = graphviz.Source(reporte)
-        ast.format = 'pdf'
-        #ast.render()
-        ast.view()     
+    dot = ASTVisualizer(context['ast'])
+    reporte   = dot.GenereteAst()         #  Ast generado por la derivacion de la gramatica  
+    ast = graphviz.Source(reporte)
+    ast.render('static/img/Tree', view=True)     
     return  render( request , "codeditor/report.html", {})
