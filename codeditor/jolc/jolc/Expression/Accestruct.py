@@ -25,7 +25,8 @@ class AccesStruct(Tree):
                         valoriterable =  valoriterable.value[index]                      # Retornamos el valor del miembro
                     else:
                         tree.addError(Description.SEMANTIC_NO_MEMBER,self.item,self.row,self.col)      # Error el valor no es un miembro    
-                valoriterable = valoriterable[self.item[len(self.item)-1]]  
+                if(self.item[len(self.item)-1] in valoriterable):
+                    valoriterable = valoriterable[self.item[len(self.item)-1]]  
             else:                            
                 tree.addError(Description.SEMANTIC_ID_404,self.identifier.identifier,self.row,self.col) 
         else:
@@ -65,7 +66,7 @@ class AccesStruct(Tree):
         simbol = table.lookup(self.identifier.identifier)           #Retorna el Simbolo
         if simbol is not None:  
             if(isinstance(simbol.value,dict)):     
-                if(simbol.mutabilidad):                               # Accedemos a los miembros
+                if(simbol.mutabilidad or simbol.mutabilidad is None):                               # Accedemos a los miembros
                     if len(self.item) == 1 :
                         if self.item[0] in simbol.value: 
                             if(simbol.value[self.item[0]] == None):                         # El valor es un miembro

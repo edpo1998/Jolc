@@ -36,6 +36,8 @@ class EvalType(Tree):
             return valor
         elif(isinstance(valor,bool)==True  and str(self.type_data) == 'Bool'):
             return valor
+        elif(isinstance(valor,dict) == True ):
+            return valor
         else: # Es por eso que retorno error ya que no es algo que pueda asignarsele un valor
             tree.addError(Description.SEMANTIC_ASSIG_NOTYPE,str(valor),self.row,self.col)
         # El valor asignado a la varible sera None

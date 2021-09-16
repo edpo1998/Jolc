@@ -43,9 +43,9 @@ class Assignament(Tree):
             if isinstance(table,GlobalScope):
                 if(isinstance(valor,dict)):
                     struct_name = self.left.identifier
-                    struct_symbol = Var(name =struct_name,typedata= valor['Tipo'],row=self.row,col=self.col,value=valor['miembros'],mutabilidad = valor['mutable'])
                     struct_decl = table.lookup(struct_name, current_scope_only=True)
                     if struct_decl is None:
+                        struct_symbol = Var(name =struct_name,typedata= valor['Tipo'],row=self.row,col=self.col,value=valor['miembros'],mutabilidad = valor['mutable'])
                         table.insert(struct_symbol) # Declaramos 
                     else:
                         # Asignamos un nuevo struct a la variable
@@ -69,9 +69,10 @@ class Assignament(Tree):
                 if(isinstance(valor,dict)):
                     struct_name = self.left.identifier
                     if('Tipo' in  valor):
-                        struct_symbol = Var(name =struct_name,typedata= valor['Tipo'],row=self.row,col=self.col,value=valor['miembros'],mutabilidad = valor['mutable'])
+                        
                         struct_decl = table.lookup(struct_name, current_scope_only=True)
                         if struct_decl is None:
+                            struct_symbol = Var(name =struct_name,typedata= valor['Tipo'],row=self.row,col=self.col,value=valor['miembros'],mutabilidad = valor['mutable'])
                             table.insert(struct_symbol) # Declaramos 
                         else:
                             # Asignamos un nuevo struct a la variable
@@ -103,9 +104,10 @@ class Assignament(Tree):
                 if(isinstance(valor,dict)):
                     struct_name = self.left.identifier
                     if('Tipo' in  valor):
-                        struct_symbol = Var(name =struct_name,typedata= valor['Tipo'],row=self.row,col=self.col,value=valor['miembros'],mutabilidad = valor['mutable'])
+                        
                         struct_decl = table.lookup(struct_name)
                         if struct_decl is None:
+                            struct_symbol = Var(name =struct_name,typedata= valor['Tipo'],row=self.row,col=self.col,value=valor['miembros'],mutabilidad = valor['mutable'])
                             table.insert(struct_symbol) # Declaramos 
                         else:
                             # Asignamos un nuevo struct a la variable
@@ -113,10 +115,10 @@ class Assignament(Tree):
                                 struct_decl.value = valor['miembros']
                             else:
                                 tree.addError(Description.SEMANTIC_STRUCT_INMUTABLE,struct_name,self.row,self.col)
-                    else:
-                        struct_symbol = Var(name =struct_name,typedata= None,row=self.row,col=self.col,value=valor)
+                    else:   
                         struct_decl = table.lookup(struct_name)
                         if struct_decl is None:
+                            struct_symbol = Var(name =struct_name,typedata= None,row=self.row,col=self.col,value=valor)
                             table.insert(struct_symbol) # Declaramos 
                         else:
                              struct_decl.value = valor

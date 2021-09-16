@@ -33,6 +33,8 @@ class Struct(Tree):
                             tdamembers[str(miembro.expression.identifier)] = str#  member:str
                         elif(miembro.type_data == 'Bool'):
                             tdamembers[str(miembro.expression.identifier)] = bool#  member:bool
+                        elif(isinstance(miembro.type_data,Identifier)):
+                            tdamembers[str(miembro.expression.identifier)] = None # member:None
                         else:
                             tree.addError(Description.SEMANTIC_DECL_STRUCT,str(miembro.type_data),self.row,self.col)
                 tree.tda[tdaname] = tdamembers
