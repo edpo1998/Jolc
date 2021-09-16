@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'djangocodemirror',
     'django_bootstrap_icons',
     'graphviz',
-    
     #Batteries 
     'codeditor',
 
