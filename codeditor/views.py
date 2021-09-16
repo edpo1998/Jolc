@@ -79,9 +79,9 @@ def symbolreport(request, *args, **kwargs):
 def treereport(request, *args, **kwargs):
     dot = ASTVisualizer(context['ast'])
     reporte   = dot.GenereteAst()         #  Ast generado por la derivacion de la gramatica  
-    #ast = graphviz.Source(reporte)
-    #display(SVG(ast.pipe(format='svg')))
-    
+
+    ast = graphviz.Source(reporte, filename = "test.gv",format="png")
+    ast.view()
     #ast.view();
     #ast.render(tree_url, view=True)     
     return  render( request , "codeditor/treereport.html", {"contenido": reporte})
