@@ -1,0 +1,5 @@
+digraph Tree {
+    node [shape=box3d, fontsize=12, fontname="Courier", height=.1,style=filled, fillcolor=darkseagreen2];
+    ranksep=.3;
+    edge [arrowsize=.5]
+}

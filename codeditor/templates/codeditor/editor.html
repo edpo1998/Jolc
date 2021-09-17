@@ -30,7 +30,7 @@
             <form  method='POST' action="."> {% csrf_token %}
                 <!-- Barra de Botones --> 
                 <div class="btn-group buttongrp botones" role="group">
-                    <button type="submit" class="btn btn-dark"> {% bs_icon 'gear-wide-connected' size='2.0em' %} <span class="font-weight-bold h5"> Run </span></button>
+                    <button type="submit" class="btn btn-dark"> {% bs_icon 'play-btn-fill' size='2.0em' %} <span class="font-weight-bold h5"> Run </span></button>
                 </div>  
                 <hr/>
                 <!-- Editores de Texto -->
@@ -50,10 +50,10 @@
 
 <!-- Javascript  -->
         <script>
-            code_codemirror.setSize(600, 600)
+            code_codemirror.setSize(600, 500)
             code_codemirror.setOption("theme", 'colorforth')
             
-            traduction_codemirror.setSize(600, 600)
+            traduction_codemirror.setSize(600, 500)
             traduction_codemirror.setOption("readOnly", true)
             traduction_codemirror.setOption("theme", 'darcula')  
         </script>

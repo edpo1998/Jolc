@@ -5,26 +5,22 @@ In computer science, an interpreter is a translator (computer program) that repe
 It then executes instructions written in a programming or scripting language, without requiring them previously to have been compiled into a machine 
 language program. JOLC, is a Julia based programming language that it can be programmed and run from any browser.
 
-## Starting 🚀  [Deploying](https://jolc201712132.herokuapp.com/codeditor/) - APP
+## Starting 🚀  [Deploying- APP](https://jolc201712132.herokuapp.com/codeditor/) 
 
 This repository is private so if you are reading this you can get a copy of the project running on your local machine for development and testing purposes.
 
 
 ### Pre-requirements📋
-* Django3.2.6
+* Django 3.2.6
 * Ubuntu 20.04.3 LTS
-* Python3
+* Python 3
 
 
 ### Installation 🔧
 
 _Steps to have a development environment running_
 
-_Exec_
 
-```
-Once the prerequisites have been made, the program should run without problem when executing it.
-```
 
 ## Built with 🛠️
 

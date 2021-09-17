@@ -51,13 +51,13 @@ def codeditor(request, *args, **kwargs):
         '''
         context['code'] = request.POST['code']    #  Actualizamos la variable global por el post del editor
         ast = jolc.execute(context['code'])       #  Ejecutamos el Interprete de jolc 
-        if(ast.output is not None):
+        if(ast is not None):
             context['output'] = ast.output            #  Salidas generadas por la ejecucion del interprete
             context['tablerror'] = ast.errores        #  Tabla de errores de la ejecucion
             context['tablesym'] =  ast.tablasimbolos  #  Tabla de simbolos de la ejecucion
             context['ast'] = ast
         else:
-            context['output'] = "Excepcion Ocurrida"
+            context['output'] = "Excepcion Ocurrida , El parser no se recupero"
 
     return  render( request , "codeditor/editor.html", context)
 
@@ -80,7 +80,7 @@ def treereport(request, *args, **kwargs):
     dot = ASTVisualizer(context['ast'])
     reporte   = dot.GenereteAst()         #  Ast generado por la derivacion de la gramatica  
     try:
-        ast = graphviz.Source(reporte, filename = "test.gv",format="png")
+        ast = graphviz.Source(reporte, filename = "static/img/test.gv",format="png")
         ast.view()
     except:
         pass  

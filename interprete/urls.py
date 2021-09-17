@@ -27,6 +27,7 @@ from codeditor.views import (
     symbolreport,
     treereport,
 )
+
 urlpatterns = [
     path('', home_view),
     path('codeditor/', codeditor),
