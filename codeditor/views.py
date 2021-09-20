@@ -1,4 +1,4 @@
-from django.http import HttpResponse    # Librebiar para peticiones
+from django.http import HttpResponseRedirect    # Librebiar para peticiones
 from django.shortcuts import render     # Libreria para renderizar en el DOM
 from codeditor.jolc import jolc         # Interprete de JOLC
 from codeditor.jolc.jolc.ASTVisualizer import ASTVisualizer 
@@ -85,3 +85,4 @@ def treereport(request, *args, **kwargs):
     except:
         pass  
     return  render( request , "codeditor/treereport.html", {"contenido": reporte})
+   

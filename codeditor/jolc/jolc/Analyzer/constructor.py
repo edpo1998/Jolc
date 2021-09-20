@@ -628,7 +628,7 @@ def p_assignament(p):# Asignar un valor o declarar (ID, Arreglo, Structura)
     '''
         expression : expression equal expression  
     '''
-    p[0] = Assignament(left=p[1],right=p[3], row = p.lineno(1),col = find_column(input, p.slice[2]))
+    p[0] = Assignament(left=p[1],right=p[3], row = p.lineno(2),col = find_column(input, p.slice[2]))
 
 
 def p_definetype(p): # Define el tipo a evaluar en la asignacion, solo los arreglos mantiene el valor
@@ -833,7 +833,7 @@ def p_acces_point(p):
     '''
         expression  :   id listpoint
     '''
-    p[0] = AccesStruct(identifier=p[1],item=p[2], row = 0,col = 0)
+    p[0] = AccesStruct(identifier=p[1],item=p[2], row = p[1].row,col = p[1].col)
 
 #  Acceso a Structs de structs
 
